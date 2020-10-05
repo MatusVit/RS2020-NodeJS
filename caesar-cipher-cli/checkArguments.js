@@ -3,8 +3,6 @@ const fs = require('fs');
 
 const checkFile = (path) => {
   try {
-    console.log(`check file ${path}`);
-
     fs.accessSync(path, fs.constants.F_OK);
   } catch (err) {
     closeWithError(`File "${path}" is not access`);
