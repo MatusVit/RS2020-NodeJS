@@ -23,9 +23,12 @@ Open command line in your computer, transfer to this project directory and run c
 
 > node caesar-cli --action encode/decode --shift <number> --input <filename> --output <filename>
 
-CLI tool 4 options (short alias and full name): Options: -a, --action [type], an action
-encode/decode -s, --shift <number> a shift -i, --input <filename> an input file -o, --output
-<filename> an output file
+CLI tool 4 options (short alias and full name):
+
+- -a, --action [type], an action encode/decode
+- -s, --shift <number> a shift
+- -i, --input <filename> an input file
+- -o, --output <filename> an output file
 
 You can encode and decode right in STDIN and get STDOUT by passing only --action and --shift command
 
