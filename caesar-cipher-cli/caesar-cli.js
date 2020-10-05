@@ -17,11 +17,8 @@ const argv = minimist(process.argv.slice(2), {
 
 if (checkArguments(argv)) {
   const { action, shift, input, output } = argv;
-  // console.log(`action:${action}, shift:${shift}, input:${input}, output:${output}`);
-
   let shiftVector = shift;
   if (action === 'decode') shiftVector *= -1;
-  // console.log('shiftVector: ', shiftVector);
 
   const inputStream = input ? fs.createReadStream(input) : process.stdin;
   const outputStream = output ? fs.createWriteStream(output, { flags: 'a+' }) : process.stdout;

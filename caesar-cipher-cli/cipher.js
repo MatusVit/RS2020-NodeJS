@@ -1,11 +1,10 @@
+const { closeWithError } = require('./utils');
 // ASCII code a-z > 097-122, A-Z > 065-090
 const lettersAmount = 26;
 
 const cipher = (inData, shift) => {
-  // todo > delete after create checkArguments
-  if (!typeof inData === "string") {
-    console.log("inData is not a string");
-    return;
+  if (!typeof inData === 'string') {
+    closeWithError('Input Data is not a string');
   }
 
   let shiftAmount = shift % lettersAmount;
