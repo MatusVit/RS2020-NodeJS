@@ -26,8 +26,3 @@ const cipher = (inData, shift) => {
 };
 
 module.exports = cipher;
-
-// const inData = "abz Привет123 ABZ";
-// const inData = "cdb Привет123 CDB";
-// const shift = -128;
-// console.log(cipher(inData, shift), "\nDone!");
