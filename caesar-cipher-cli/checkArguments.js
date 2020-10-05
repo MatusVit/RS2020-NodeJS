@@ -1,6 +1,5 @@
 const { closeWithError } = require('./utils');
 const fs = require('fs');
-// const path = require('path');
 
 const checkFile = (path) => {
   try {
@@ -8,7 +7,7 @@ const checkFile = (path) => {
 
     fs.accessSync(path, fs.constants.F_OK);
   } catch (err) {
-    closeWithError(`File "${path}"is not access`);
+    closeWithError(`File "${path}" is not access`);
   }
 };
 
@@ -35,7 +34,7 @@ const checkArguments = (argv) => {
     checkFile(input);
   }
 
-  if (output && fs.existsSync(output)) {
+  if (output) {
     checkFile(output);
   }
 
